@@ -4,7 +4,6 @@ const { UserValidator } = require("../validator");
 const { ErrorMessage, Message } = require("../constant");
 const { UserModel } = require("../models/userModel");
 const { LoginResponseDto } = require("../dto");
-const bcrypt = require("bcrypt");
 const { UserResponseDto, UserSignUpDto } = require("../dto");
 
 authRouter.post("/signUp", UserValidator.userSignUp, async (req, res) => {
