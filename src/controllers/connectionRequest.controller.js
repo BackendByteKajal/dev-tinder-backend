@@ -89,7 +89,6 @@ class ConnectionRequestController {
     try {
       const loggedInUser = req.user._id;
       const toUserId = new mongoose.Types.ObjectId(req.params.toUserId);
-      console.log(loggedInUser, toUserId);
       const connection = await ConnectionRequestModel.findOne({
         $or: [
           { fromUserId: loggedInUser, toUserId: toUserId },

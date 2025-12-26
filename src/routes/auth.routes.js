@@ -40,14 +40,12 @@ authRouter.post("/login", async (req, res) => {
       return res.status(404).json({ message: ErrorMessage.InvalidCredentials });
     }
     const isPasswordMatch = await userData.validateUserPassword(password);
-    console.log(isPasswordMatch );
     if (isPasswordMatch) {
       const loginUser = new LoginResponseDto(userData);
       //create jwt token
       const token = await userData.createJwt();
       // send cookies in response
       const isProd = process.env.NODE_ENV === "production";
-      console.log("isProd : ", isProd);
 
       res.cookie("token", token, {
         expires: new Date(Date.now() + 8 * 3600000),

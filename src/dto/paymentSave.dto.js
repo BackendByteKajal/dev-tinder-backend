@@ -10,7 +10,6 @@ class PaymentSaveDto {
   entity;
   notes;
   constructor(razorPayOrderDetail) {
-    console.log("razorPayOrderDetail: ", razorPayOrderDetail);
     this.orderId = razorPayOrderDetail.id;
     this.userId = razorPayOrderDetail.userId;
     this.status = razorPayOrderDetail.status;
