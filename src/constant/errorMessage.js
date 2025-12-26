@@ -1,0 +1,20 @@
+module.exports.ErrorMessage = {
+  EnterStrongPassword: "Enter Strong Password",
+  InvalidGender: "Invalid Gender",
+  InvalidEmail: "Invalid Email",
+  SomeThingWentWrong: "Something Went Wrong",
+  UserNotFound: "User Not Found",
+  TARGET_USER_NOT_FOUND:"Target User Not Found",
+  InvalidUserNameAndPassword: "Invalid UserName ,Password",
+  InvalidCredentials: "Invalid Credentials",
+  USER_NOT_AUTHENTICATE: "User Not Authenticate",
+  EDIT_NOT_ALLOWED: "Edit Not Allowed",
+  DATA_ALREADY_EXISTS: "Data Already Exists",
+  CONNECTION_REQUEST_ALREADY_EXISTS: "Connection Request Already Exists",
+  YOU_CANNOT_SEND_CONNECTION_REQUEST_TO_YOURSELF:
+    "You cannot send a request to yourself",
+  REQUEST_NOT_FOUND: " Connection Request Not Found",
+  PLEASE_ENTER_VALID_REQUEST_ID: "Please Enter valid requestId",
+  INVALID_STATUS: "Invalid Status",
+  PENDING_REQUEST_NOT_FOUND: "Pending Request Not Found",
+};
