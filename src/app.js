@@ -1,9 +1,9 @@
 const express = require("express");
 const http = require("http");
+require("dotenv").config();
 const { connectDb } = require("./config/database");
 const app = express();
 const cookieParser = require("cookie-parser");
-require("dotenv").config();
 require("./utils/cronjob");
 const {
   authRouter,
@@ -21,9 +21,9 @@ const initializedSocket = require("./utils/socket");
 const { ErrorMiddleware } = require("./middleware");
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: process.env.REACT_URL,
     credentials: true,
-  })
+  }),
 );
 
 app.use(express.json());
